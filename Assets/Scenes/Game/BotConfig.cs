@@ -5,6 +5,8 @@ using UnityEngine;
 public class BotConfig : ScriptableObject
 {
     public GameObject Body;
-    public int Health;
-    public int Damage;
+    public int MinHealth;
+    public int MaxHealth;
+    public int MinDamage;
+    public int MaxDamage;
 }

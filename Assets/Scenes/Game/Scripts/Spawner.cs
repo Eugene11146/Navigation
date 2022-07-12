@@ -6,7 +6,7 @@ public class Spawner : MonoBehaviour
 {
     [SerializeField] private List<GameObject> SpawnPoints;
     private int place;
-    [SerializeField] private List<BotConfig> AllUnits;
+    public List<BotConfig> AllUnits;
     public List<GameObject> Targets;
 
     public int a = 4;
@@ -19,7 +19,6 @@ public class Spawner : MonoBehaviour
             Targets.Add(Instantiate(AllUnits[i].Body, SpawnPoints[place].transform.position, SpawnPoints[place].transform.rotation));
         }
 
-        Debug.Log(AllUnits.Count);
     }
 
     private void RandomValue()

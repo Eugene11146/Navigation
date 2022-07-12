@@ -13,5 +13,7 @@ MonoBehaviour:
   m_Name: EazyBot
   m_EditorClassIdentifier: 
   Body: {fileID: 5213793403378508254, guid: ebadc3cabfa9d3848b92fe5aa3f44382, type: 3}
-  Health: 0
-  Damage: 0
+  MinHealth: 16
+  MaxHealth: 20
+  MinDamage: 1
+  MaxDamage: 3

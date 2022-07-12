@@ -6,13 +6,12 @@ public class FindTargetForBots : MonoBehaviour
 {
     protected GameObject _target;
     private Spawner _spawner;
-   
-    
+
+
     [Inject]
     private void Construct(Spawner spawner)
     {
         _spawner = spawner;
-        Debug.Log("nooooo");
     }
 
     private void Awake()
@@ -26,9 +25,8 @@ public class FindTargetForBots : MonoBehaviour
         {
             Debug.Log("yes");
         }
-       // for (int i = 0; i < _spawner.AllUnits.Count; i++)
         {
-           // objects.Add(_spawner.AllUnits[i].Body);
+            // objects.Add(_spawner.AllUnits[i].Body);
         }
         for (int i = 0; i < _spawner.Targets.Count; i++)
         {
@@ -42,10 +40,9 @@ public class FindTargetForBots : MonoBehaviour
                 Number++;
             }
 
-            Debug.Log(_spawner.Targets.Count);
             _spawner.Targets[i].GetComponent<BotMovement>().target = _spawner.Targets[Number];
-
+            _spawner.Targets[i].GetComponent<FindTarget>().Targets = _spawner.Targets;
         }
-  
     }
 }
+
