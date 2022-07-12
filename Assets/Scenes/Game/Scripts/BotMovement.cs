@@ -4,50 +4,33 @@ using Zenject;
 
 public class BotMovement : MonoBehaviour
 {
-    private GameObject target;
+    public GameObject target;
     private NavMeshAgent Bot;
-    private FindTarget ScripFind;
-    private void Assign()
-    {
-        if (ScripFind != null)
-        {
-            ScripFind.Finded -= DetectedTarget;
-        }
-        ScripFind.Finded += DetectedTarget;
-    }
 
+    public BotConfig EnBot;
+    
     private void Start()
     {
         Bot = gameObject.GetComponent(typeof(NavMeshAgent)) as NavMeshAgent;
-        ScripFind = gameObject.GetComponent(typeof(FindTarget)) as FindTarget;
     }
 
     private void UpdateTarget()
     {
+        
         Bot.destination = target.transform.position;
+        
     }
 
     private void Update()
     {
-        if (GetInput())
-        {
-            UpdateTarget();
-            
-        }
+        UpdateTarget();
+
     }
 
-    private bool GetInput()
+    private void Targeten()
     {
-        if (Input.GetMouseButtonDown(0))
-        {
-            return true;
-        }
-        return false;
+        target = EnBot.Body;
+        
     }
 
-    
-    private void DetectedTarget(GameObject aim)
-    {
-        target = aim;
-    }
 }

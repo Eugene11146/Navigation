@@ -4,20 +4,22 @@ using Zenject;
 
 public class Spawner : MonoBehaviour
 {
-    [SerializeField] private GameObject Unit;
-    public int Amount;
     [SerializeField] private List<GameObject> SpawnPoints;
     private int place;
+    [SerializeField] private List<BotConfig> AllUnits;
+    public List<GameObject> Targets;
 
-    public  List<GameObject> AllUnits;
+    public int a = 4;
 
     private void Awake()
     {
-        for (int i = 0; i < Amount; i++)
+        for (int i = 0; i < AllUnits.Count; i++)
         {
             RandomValue();
-            Spawn();
+            Targets.Add(Instantiate(AllUnits[i].Body, SpawnPoints[place].transform.position, SpawnPoints[place].transform.rotation));
         }
+
+        Debug.Log(AllUnits.Count);
     }
 
     private void RandomValue()
@@ -27,7 +29,6 @@ public class Spawner : MonoBehaviour
 
     private void Spawn()
     {
-        AllUnits.Add(Instantiate(Unit, SpawnPoints[place].transform));
-        Debug.Log("yes");
+        
     }
 }

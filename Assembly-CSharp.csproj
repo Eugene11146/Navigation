@@ -53,10 +53,14 @@
     <UnityVersion>2020.3.20f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scenes\Game\Scripts\FindTargetForBots.cs" />
     <Compile Include="Assets\Scenes\Game\Scripts\BotMovement.cs" />
     <Compile Include="Assets\Scenes\Game\Scripts\Spawner.cs" />
-    <Compile Include="Assets\Scenes\Game\Scripts\FindTarget.cs" />
-    <Compile Include="Assets\Scenes\Game\Resources\UntitledInstaller.cs" />
+    <Compile Include="Assets\Scenes\Game\BotConfig.cs" />
+    <Compile Include="Assets\Scenes\Game\Resources\MonoSpawner.cs" />
+    <Compile Include="Assets\Scenes\Game\Scripts\BotStatus.cs" />
+    <Compile Include="Assets\Scenes\Game\Scripts\BotBase.cs" />
+    <Compile Include="Assets\Scenes\Game\Scripts\TrigerBotDetection.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -281,20 +285,20 @@
     <Reference Include="UnityEditor.UnityConnectModule">
       <HintPath>D:\Program Files (x86)\Unity hub\2020.3.20f1\Editor\Data\Managed\UnityEngine\UnityEditor.UnityConnectModule.dll</HintPath>
     </Reference>
-    <Reference Include="Zenject.ReflectionBaking.Mono.Cecil.Rocks">
-      <HintPath>Assets\Plugins\Zenject\OptionalExtras\ReflectionBaking\Lib\Zenject.ReflectionBaking.Mono.Cecil.Rocks.dll</HintPath>
+    <Reference Include="Zenject-usage">
+      <HintPath>Assets\Plugins\Zenject\Source\Usage\Zenject-usage.dll</HintPath>
     </Reference>
     <Reference Include="Zenject.ReflectionBaking.Mono.Cecil.Pdb">
       <HintPath>Assets\Plugins\Zenject\OptionalExtras\ReflectionBaking\Lib\Zenject.ReflectionBaking.Mono.Cecil.Pdb.dll</HintPath>
     </Reference>
-    <Reference Include="Zenject-usage">
-      <HintPath>Assets\Plugins\Zenject\Source\Usage\Zenject-usage.dll</HintPath>
-    </Reference>
-    <Reference Include="Zenject.ReflectionBaking.Mono.Cecil">
-      <HintPath>Assets\Plugins\Zenject\OptionalExtras\ReflectionBaking\Lib\Zenject.ReflectionBaking.Mono.Cecil.dll</HintPath>
+    <Reference Include="Zenject.ReflectionBaking.Mono.Cecil.Rocks">
+      <HintPath>Assets\Plugins\Zenject\OptionalExtras\ReflectionBaking\Lib\Zenject.ReflectionBaking.Mono.Cecil.Rocks.dll</HintPath>
     </Reference>
     <Reference Include="Zenject.ReflectionBaking.Mono.Cecil.Mdb">
       <HintPath>Assets\Plugins\Zenject\OptionalExtras\ReflectionBaking\Lib\Zenject.ReflectionBaking.Mono.Cecil.Mdb.dll</HintPath>
+    </Reference>
+    <Reference Include="Zenject.ReflectionBaking.Mono.Cecil">
+      <HintPath>Assets\Plugins\Zenject\OptionalExtras\ReflectionBaking\Lib\Zenject.ReflectionBaking.Mono.Cecil.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.iOS.Extensions.Xcode">
       <HintPath>D:\Program Files (x86)\Unity hub\2020.3.20f1\Editor\Data\PlaybackEngines\iOSSupport\UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
@@ -679,14 +683,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="Zenject-Editor.csproj">
-      <Project>{1CDB96E9-55DD-85EA-A162-661ED8E8EF4A}</Project>
-      <Name>Zenject-Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Zenject-PoolMonitor-Editor.csproj">
-      <Project>{EDDDB113-DAC6-7D8A-06C7-2583FACF91EF}</Project>
-      <Name>Zenject-PoolMonitor-Editor</Name>
-    </ProjectReference>
     <ProjectReference Include="Zenject-ReflectionBaking-Editor.csproj">
       <Project>{DEB53499-73D0-B2DD-75FE-E851998BFCCC}</Project>
       <Name>Zenject-ReflectionBaking-Editor</Name>
@@ -694,6 +690,14 @@
     <ProjectReference Include="Zenject.csproj">
       <Project>{B1F6F4E7-C26F-B925-F58E-9C9C285CF06D}</Project>
       <Name>Zenject</Name>
+    </ProjectReference>
+    <ProjectReference Include="Zenject-Editor.csproj">
+      <Project>{1CDB96E9-55DD-85EA-A162-661ED8E8EF4A}</Project>
+      <Name>Zenject-Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Zenject-PoolMonitor-Editor.csproj">
+      <Project>{EDDDB113-DAC6-7D8A-06C7-2583FACF91EF}</Project>
+      <Name>Zenject-PoolMonitor-Editor</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
