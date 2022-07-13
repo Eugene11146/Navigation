@@ -623,7 +623,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9a618ac45768074da889bcb4d904c37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SpawnPoints:
+  spawnPoints:
   - {fileID: 1049021033}
   - {fileID: 450895065}
   - {fileID: 1936946116}
@@ -633,8 +633,6 @@ MonoBehaviour:
   - {fileID: 796016178}
   - {fileID: 508978375}
   AllUnits:
-  - {fileID: 11400000, guid: 5ef1bca0ac5904449a2446100cfe31e2, type: 2}
-  - {fileID: 11400000, guid: 5ef1bca0ac5904449a2446100cfe31e2, type: 2}
   - {fileID: 11400000, guid: 5ef1bca0ac5904449a2446100cfe31e2, type: 2}
   - {fileID: 11400000, guid: 5ef1bca0ac5904449a2446100cfe31e2, type: 2}
   - {fileID: 11400000, guid: 5ef1bca0ac5904449a2446100cfe31e2, type: 2}

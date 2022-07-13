@@ -1,6 +1,5 @@
 using UnityEngine;
 using Zenject;
-
 public class TransferTargetsForBots : MonoBehaviour
 {
     private Spawner _spawner;
@@ -14,13 +13,12 @@ public class TransferTargetsForBots : MonoBehaviour
     {
         TransferTargets();
     }
-
+    //Передача списка возможных целей каждому Боту
     private void TransferTargets()
     {
         for (int i = 0; i < _spawner.Targets.Count; i++)
         {
-            _spawner.Targets[i].GetComponent<FindTarget>().AllTargets = _spawner.Targets;
+            _spawner.Targets[i].GetComponent<BotFindTarget>().AllTargets = _spawner.Targets;
         }
     }
 }
-

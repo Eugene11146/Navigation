@@ -58,12 +58,14 @@
     <Compile Include="Assets\Scenes\Game\Scripts\BotScripts\BotBaseManager.cs" />
     <Compile Include="Assets\Scenes\Game\Scripts\BotScripts\BotStatus.cs" />
     <Compile Include="Assets\Scenes\Game\Scripts\Spawner.cs" />
-    <Compile Include="Assets\Scenes\Game\Scripts\BotScripts\FindTarget.cs" />
+    <Compile Include="Assets\Scenes\Game\Scripts\BotScripts\BotFindTarget.cs" />
     <Compile Include="Assets\Scenes\Game\Scripts\BotScripts\BotManager.cs" />
     <Compile Include="Assets\Scenes\Game\Scripts\UI\UIInfo.cs" />
     <Compile Include="Assets\Scenes\Game\Configs\BotConfig.cs" />
     <Compile Include="Assets\Scenes\Game\Resources\MonoSpawner.cs" />
-    <Compile Include="Assets\Scenes\Game\Scripts\BotScripts\DetectionForAttack.cs" />
+    <Compile Include="Assets\Scenes\Game\Scripts\BotScripts\BotDetectionForAttack.cs" />
+    <Compile Include="Assets\Scenes\Menu\StartButton.cs" />
+    <Compile Include="Assets\Scenes\Load\LoadScene.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

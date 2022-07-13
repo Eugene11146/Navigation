@@ -17,3 +17,5 @@ MonoBehaviour:
   MaxHealth: 20
   MinDamage: 1
   MaxDamage: 3
+  MinSpeed: 2
+  MaxSpeed: 10
