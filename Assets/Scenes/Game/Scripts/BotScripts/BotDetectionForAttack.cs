@@ -18,6 +18,7 @@ public class BotDetectionForAttack : MonoBehaviour
             _target.GetComponent<BotDetectionForAttack>().Attack?.Invoke(_status.Damage);
         }
     }
+
     //Проверка цели на наличие
     public void CheckTarget()
     {
@@ -28,6 +29,7 @@ public class BotDetectionForAttack : MonoBehaviour
             _status.IsDead += TargetDead;
         }
     }
+
     private void TargetDead(int Aim)
     {
         gameObject.GetComponent<BotStatus>().Score++;

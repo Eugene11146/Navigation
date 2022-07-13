@@ -5,13 +5,14 @@ using UnityEngine.Events;
 public class BotStatus : MonoBehaviour
 {
     public BotConfig Config;
+    private BotDetectionForAttack _detection;
+
     public float Health;
     public int Damage;
     public int Score;
     public int ID;
     public int Speed;
     private float _damageTime = 0.5f;
-    private BotDetectionForAttack _detection;
 
     public delegate int InputData(int AimDeath);
     public UnityAction<int> IsDead;
@@ -25,6 +26,7 @@ public class BotStatus : MonoBehaviour
         ID = Random.Range(0, 999);
         _detection = gameObject.GetComponent<BotDetectionForAttack>();
     }
+
     private void TakeDamage(int Dmg)
     {
         _damageTime -= Time.deltaTime;

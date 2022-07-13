@@ -13,33 +13,39 @@ public class BotManager : BotBaseManager
         _movement = gameObject.GetComponent<BotMovement>();
         _detection = gameObject.GetComponent<BotDetectionForAttack>();
     }
+
     private void Update()
     {
         UpdateTarget();
     }
+
     private void FixedUpdate()
     {
         UpdateStatus();
         MeasureDistanceToTarget();
         UpdateUIInfo();
     }
+
     //Измеряет длину до цели
     public override void MeasureDistanceToTarget()
     {
         _detection.MeasureDistanceForAttack();
     }
+
     //Обновление характеристик в UI
     public override void UpdateUIInfo()
     {
         _uIInfo.UpdateHp();
         _uIInfo.UpdateScore();
     }
+
     //Обновление информации по получаемому урону и смерти
     public override void UpdateStatus()
     {
         _status.Death();
         _status.TakeInfoDamage();
     }
+
     //Проверка на наличие цели и ее поиск
     public override void UpdateTarget()
     {

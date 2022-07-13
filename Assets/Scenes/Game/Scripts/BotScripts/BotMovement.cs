@@ -12,7 +12,7 @@ public class BotMovement : MonoBehaviour
 
     private void Start()
     {
-        _botNavMesh = gameObject.GetComponent(typeof(NavMeshAgent)) as NavMeshAgent;
+        _botNavMesh = gameObject.GetComponent<NavMeshAgent>();
         _botNavMesh.speed = gameObject.GetComponent<BotStatus>().Speed;
     }
 

@@ -4,16 +4,19 @@ using UnityEngine;
 //Класс для поиска цели среди списка для бота
 public class BotFindTarget : MonoBehaviour
 {
-    public List<GameObject> AllTargets;
     [SerializeField] private List<GameObject> _myTargets;
-    private BotMovement _movs;
+    public List<GameObject> AllTargets;
     public bool AreTargetsAvailavle = true;
+    
+    private BotMovement _movs;
+    
     private void Start()
     {
         _movs = gameObject.GetComponent<BotMovement>();
         _movs.NewTarget += FindNewTarget;
         SortTargets();
     }
+
     // Подбор новой цели из оставшихся
     public void FindNewTarget(GameObject Targ)
     {
@@ -30,6 +33,7 @@ public class BotFindTarget : MonoBehaviour
         }
         FindAvailableTargets();
     }
+
     // Формирования списка , исключающего себя
     private void SortTargets()
     {
