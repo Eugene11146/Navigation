@@ -1,5 +1,7 @@
 using UnityEngine;
 using Zenject;
+
+//Класс для передачи списка таргетов со спавнера к ботам
 public class TransferTargetsForBots : MonoBehaviour
 {
     private Spawner _spawner;

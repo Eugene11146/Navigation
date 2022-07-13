@@ -1,5 +1,5 @@
 using UnityEngine;
-
+//Класс "Фасад" по управлению всеми под системами бота
 public class BotManager : BotBaseManager
 {
     private BotStatus _status;

@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.Events;
 
+//Класс для измерения дистанции для атаки цели
 public class BotDetectionForAttack : MonoBehaviour
 {
     private GameObject _target;

@@ -1,5 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
+
+//Класс для спавна ботов на сцене
 public class Spawner : MonoBehaviour
 {
     [SerializeField] private List<GameObject> spawnPoints;

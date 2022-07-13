@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.Events;
-
+//Класс отвечающий за перемещение бота к цели
 public class BotMovement : MonoBehaviour
 {
     public GameObject Target;

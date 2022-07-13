@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+//Класс отвечающий за выведение информации о боте на UI Бота
 public class UIInfo : MonoBehaviour
 {
     [SerializeField] private Image HPbar;
@@ -16,11 +17,14 @@ public class UIInfo : MonoBehaviour
         _startHp = Status.Health;
         _currentScore = Status.Score;
     }
+
+    //Обновление жизней
     public void UpdateHp()
     {
         float filling = Status.Health / _startHp;
         HPbar.fillAmount = filling;
     }
+    //Обновление счета
     public void UpdateScore()
     {
         if (_currentScore != Status.Score)

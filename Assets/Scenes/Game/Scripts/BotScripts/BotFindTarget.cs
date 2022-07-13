@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//Класс для поиска цели среди списка для бота
 public class BotFindTarget : MonoBehaviour
 {
     public List<GameObject> AllTargets;

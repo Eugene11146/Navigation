@@ -1,5 +1,7 @@
 using UnityEngine;
 using UnityEngine.Events;
+
+//Класс отслеживающий состояние бота (здоровье, счет, скорость)
 public class BotStatus : MonoBehaviour
 {
     public BotConfig Config;
