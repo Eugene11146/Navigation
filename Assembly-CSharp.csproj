@@ -53,17 +53,17 @@
     <UnityVersion>2020.3.20f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scenes\Game\Scripts\FindTargetForBots.cs" />
-    <Compile Include="Assets\Scenes\Game\Scripts\BotMovement.cs" />
-    <Compile Include="Assets\Scenes\Game\Scripts\BotBase.cs" />
-    <Compile Include="Assets\Scenes\Game\Scripts\BotStatus.cs" />
+    <Compile Include="Assets\Scenes\Game\Scripts\TransferTargetsForBots.cs" />
+    <Compile Include="Assets\Scenes\Game\Scripts\BotScripts\BotMovement.cs" />
+    <Compile Include="Assets\Scenes\Game\Scripts\BotScripts\BotBaseManager.cs" />
+    <Compile Include="Assets\Scenes\Game\Scripts\BotScripts\BotStatus.cs" />
     <Compile Include="Assets\Scenes\Game\Scripts\Spawner.cs" />
-    <Compile Include="Assets\Scenes\Game\Scripts\FindTarget.cs" />
-    <Compile Include="Assets\Scenes\Game\Scripts\BotManager.cs" />
-    <Compile Include="Assets\Scenes\Game\BotConfig.cs" />
-    <Compile Include="Assets\Scenes\Game\Resources\MonoSpawner.cs" />
-    <Compile Include="Assets\Scenes\Game\Scripts\DetectionForAttack.cs" />
+    <Compile Include="Assets\Scenes\Game\Scripts\BotScripts\FindTarget.cs" />
+    <Compile Include="Assets\Scenes\Game\Scripts\BotScripts\BotManager.cs" />
     <Compile Include="Assets\Scenes\Game\Scripts\UI\UIInfo.cs" />
+    <Compile Include="Assets\Scenes\Game\Configs\BotConfig.cs" />
+    <Compile Include="Assets\Scenes\Game\Resources\MonoSpawner.cs" />
+    <Compile Include="Assets\Scenes\Game\Scripts\BotScripts\DetectionForAttack.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

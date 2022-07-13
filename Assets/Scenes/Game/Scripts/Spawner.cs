@@ -9,8 +9,6 @@ public class Spawner : MonoBehaviour
     public List<BotConfig> AllUnits;
     public List<GameObject> Targets;
 
-    public int a = 4;
-
     private void Awake()
     {
         for (int i = 0; i < AllUnits.Count; i++)
@@ -18,16 +16,10 @@ public class Spawner : MonoBehaviour
             RandomValue();
             Targets.Add(Instantiate(AllUnits[i].Body, SpawnPoints[place].transform.position, SpawnPoints[place].transform.rotation));
         }
-
     }
 
     private void RandomValue()
     {
        place = Random.Range(0,SpawnPoints.Count);
-    }
-
-    private void Spawn()
-    {
-        
     }
 }

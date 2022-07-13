@@ -644,7 +644,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 5ef1bca0ac5904449a2446100cfe31e2, type: 2}
   - {fileID: 11400000, guid: 5ef1bca0ac5904449a2446100cfe31e2, type: 2}
   Targets: []
-  a: 6
 --- !u!1 &499518774
 GameObject:
   m_ObjectHideFlags: 0

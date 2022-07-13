@@ -10,14 +10,12 @@ public class UIInfo : MonoBehaviour
     public BotStatus Status;
     private float _startHp;
     private int _currentScore;
-    
 
     private void Start()
     {
         _startHp = Status.Health;
         _currentScore = Status.Score;
     }
-
     public void UpdateHp()
     {
         float filling = Status.Health / _startHp;
@@ -31,5 +29,4 @@ public class UIInfo : MonoBehaviour
             ScoreText.text = _currentScore.ToString();
         }
     }
-
 }
